@@ -1,8 +1,8 @@
-const getFactBtn = document.getElementById("getFactBtn");
-const favoriteBtn = document.getElementById("favoriteBtn");
-const factElement = document.getElementById("fact");
-const sourceElement = document.getElementById("source");
-const favoritesList = document.getElementById("favoritesList");
+const getFactBtn = document.querySelector("getFactBtn");
+const favoriteBtn = document.querySelector("favoriteBtn");
+const factElement = document.querySelector("fact");
+const sourceElement = document.querySelector("source");
+const favoritesList = document.querySelector("favoritesList");
 
 let currentFact = "";
 
