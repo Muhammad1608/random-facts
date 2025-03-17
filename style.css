@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.fact {
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 30px;
+}
+.source {
+    font-size: 16px;
+    font-style: normal;
+    margin-top: 5px;
+}
+.favorites {
+    margin-top: 50px;
+}
+.favorites ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.favorites li {
+    margin: 10px 0;
+}
