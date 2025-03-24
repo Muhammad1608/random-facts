@@ -42,20 +42,23 @@ function removeFavorite(favorite) {
 }
 
 function getRandomFact() {
-    const url = "https://api.spacefacts.dev/random";
+    const url = "https://api.le-systeme-solaire.net/rest/bodies/";
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            currentFact = { fact: data.fact, source: data.source || "Источник неизвестен" };
-            factElement.textContent = data.fact;
-            sourceElement.textContent = `Источник: ${data.source || "Неизвестен"}`;
+            const randomIndex = Math.floor(Math.random() * data.bodies.length);
+            const planet = data.bodies[randomIndex];
+
+            currentFact = { fact: `Название: ${planet.englishName}`, source: "le-systeme-solaire.net" };
+            factElement.textContent = `Название: ${planet.englishName}`;
+            sourceElement.textContent = "Источник: le-systeme-solaire.net";
         })
         .catch(() => {
-            currentFact = null; // Сброс текущего факта
             factElement.textContent = "Не удалось загрузить факт";
             sourceElement.textContent = "";
         });
 }
+
 
 getFactBtn.addEventListener("click", getRandomFact);
 favoriteBtn.addEventListener("click", addToFavorites);
